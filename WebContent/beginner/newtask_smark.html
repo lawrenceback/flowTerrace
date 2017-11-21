@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<link rel="stylesheet" href="plugins/layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css" />
+ 
+</head>
+<body>
+	<div class="smarkbox">
+		<textarea name="" id="" cols="90" rows="10" class="mb20" >
+点击此处输入视频链接,支持单个/批量模式输入
+>批量模式(一次上限10条):     
+“地址”+“空格”+“数量” ,一行一条
+例如: 
+视频链接1  10000
+视频链接2  10000
+
+		</textarea>
+		<form class="layui-form" action="" > 
+                   
+				<div class="layui-form-item" >
+				 
+					<div class="layui-input-inline" style="width:400px;">
+						  	  <select name="quiz1">
+                            <option value="">腾讯</option>
+                            <option value="浙江" selected="">腾讯</option>
+                            <option value="你的工号">腾讯</option>
+                            <option value="你最喜欢的老师">中速</option>
+                        </select> 
+					</div>
+					<div class="layui-form-mid layui-word-aux red">当前单价:?元/万</div>
+				</div>   
+				<div class="layui-form-item" >
+				 
+					<div class="layui-input-inline" style="width:200px;">
+						<input type="password" name="password" lay-verify="pass" placeholder="请输入要刷的播放数" autocomplete="off" class="layui-input">
+					</div>
+					<div class="layui-form-mid layui-word-aux">本次消费0积分/消费后：积分</div>
+				</div>
+				<div class="quickbox   mb20" style="height:30px">
+				<div class=" fl" style="width:150px;">
+               	  <select name="quiz1">
+                            <option value="" selected="">快速</option>
+                            <option value="浙江" >腾讯</option>
+                            <option value="你的工号">腾讯</option>
+                            <option value="你最喜欢的老师">中速</option>
+                        </select> 
+               </div> 
+			<div class=" fr" >				 
+					<div class="layui-input-inline fr" style="width:400px;">
+						<input type="password" name="password" lay-verify="pass" placeholder="备注" autocomplete="off" class="layui-input">
+					</div>
+					 
+				</div>
+				</div>
+				<div class="quickbox cl mb20" style="height:30px">
+				<div class=" fl" style="width:150px;">
+               	  <select name="quiz1">
+                            <option value="" selected="">计划执行</option>
+                            <option value="浙江" >腾讯</option>
+                            <option value="你的工号">腾讯</option>
+                          
+                   </select> 
+               </div> 
+			<div class=" fl" >				 
+					<div class="fl" style="width: ;">
+					<span>从</span>
+						<div class="layui-inline">
+							<input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-mm-dd" autocomplete="off" class="layui-input" onclick="layui.laydate({elem: this})">
+						 
+					</div>
+					<span>起每隔</span>
+					<span class="inputspan layui-input">1</span><span>天执行1次,</span><span>共执行</span><span class="inputspan layui-input">1</span>次
+					</div>
+					 
+				</div>
+				</div>
+ 
+				<div class="layui-form-item">
+					 
+						<input type="checkbox" name="sex" value="男" title="开启重复提交提示" >
+				 
+				</div>
+            </form>
+
+
+	</div>
+		<script type="text/javascript" src="plugins/layui/layui.js"></script>
+		<script>
+			layui.use(['form', 'layedit', 'laydate'], function() {
+				var form = layui.form(),
+					layer = layui.layer,
+					layedit = layui.layedit,
+					laydate = layui.laydate;
+
+				//创建一个编辑器
+				var editIndex = layedit.build('LAY_demo_editor');
+				//自定义验证规则
+				form.verify({
+					title: function(value) {
+						if(value.length < 5) {
+							return '标题至少得5个字符啊';
+						}
+					},
+					pass: [/(.+){6,12}$/, '密码必须6到12位'],
+					content: function(value) {
+						layedit.sync(editIndex);
+					}
+				});
+
+				//监听提交
+				form.on('submit(demo1)', function(data) {
+					layer.alert(JSON.stringify(data.field), {
+						title: '最终的提交信息'
+					})
+					return false;
+				});
+			});
+		</script>
+</body>
+</html>

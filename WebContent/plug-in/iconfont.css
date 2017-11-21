@@ -1,0 +1,13 @@
+@import "//at.alicdn.com/t/font_426708_3uobx3yw4vbtvs4i.css";
+.iconfont{
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	padding-right: 0.25em;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-weizhi1{
+	font-size:22px;
+	color:#f23c3c;
+}

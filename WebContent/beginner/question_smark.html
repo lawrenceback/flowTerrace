@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<link rel="stylesheet" href="plugins/layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css" />
+<style type="text/css">
+	.question span{
+		line-height: 30px;
+		width: 120px;
+		display: inline-block;
+		text-align: center;
+		border-right:1px solid #e2e2e2;
+	}
+	.question{
+		border:1px solid #e2e2e2;
+	}
+	.quefr{
+		
+	}
+	.question2{
+		height:120px;
+	}
+	.question2 span{
+		line-height: 120px;
+	}
+</style>
+
+</head>
+<body>
+	<div class="smarkbox">
+		 <div class="question ovel mb20">
+		 	<span class="fl">标题或链接</span>
+		 	 <div class="quefr fr">
+		 	 	
+		 	 </div>
+		 </div>
+		 
+		 <div class="question ovel mb20 question2">
+		 	<span class="fl">详细说明</span>
+		 	 <div class="quefr fr">
+		 	 	
+		 	 </div>
+		 </div>
+		  <div class="question ovel mb20">
+		 	<span class="fl">相关载图</span>
+		 	 <div class="quefr fr">
+		 	 	
+		 	 </div>
+		 </div>
+	 
+	</div>
+		<script type="text/javascript" src="plugins/layui/layui.js"></script>
+		<script>
+			layui.use(['form', 'layedit', 'laydate'], function() {
+				var form = layui.form(),
+					layer = layui.layer,
+					layedit = layui.layedit,
+					laydate = layui.laydate;
+
+				//创建一个编辑器
+				var editIndex = layedit.build('LAY_demo_editor');
+				//自定义验证规则
+				form.verify({
+					title: function(value) {
+						if(value.length < 5) {
+							return '标题至少得5个字符啊';
+						}
+					},
+					pass: [/(.+){6,12}$/, '密码必须6到12位'],
+					content: function(value) {
+						layedit.sync(editIndex);
+					}
+				});
+
+				//监听提交
+				form.on('submit(demo1)', function(data) {
+					layer.alert(JSON.stringify(data.field), {
+						title: '最终的提交信息'
+					})
+					return false;
+				});
+			});
+		</script>
+</body>
+</html>

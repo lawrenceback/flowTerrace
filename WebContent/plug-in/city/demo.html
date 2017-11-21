@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>jQuery表单省市区城市三级联动特效代码</title>
+	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+	<script src="js/Area.js" type="text/javascript"></script>
+	<script src="js/AreaData_min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(function () {
+			//initComplexArea('seachprov', 'seachcity', 'seachdistrict', area_array, sub_array, '0', '0', '0');
+
+			var adds = formatAdds('江西省','南昌市','东湖区');
+			initComplexArea('province', 'city', 'county', area_array, sub_array, sub_arr, adds.province  ,adds.city , adds.county);
+		});
+
+		//得到地区码
+		function getAreaID() {
+			var area = 0;
+			area += Number( $("#province option:selected").attr('data-code') || 0 );
+			area += Number( $("#city option:selected").attr('data-code') || 0 );
+			area += Number( $("#county option:selected").attr('data-code') || 0 );
+			return area;
+		}
+
+		function showAreaID() {
+			//地区码
+			var areaID = getAreaID();
+			//地区名
+			var areaName = getAreaNamebyID(areaID);
+			alert("您选择的地区码：" + areaID + "      地区名：" + areaName);
+		}
+
+		//根据地区码查询地区名
+		function getAreaNamebyID(areaID) {
+			var areaName = "";
+			areaName += $("#province").val();
+			areaName += '-' + $("#city").val();
+			areaName += '-' + $("#county").val();
+			return areaName;
+		}
+	</script>
+
+</head>
+<body>
+<select class="form-control" id="province" name="province" onChange="changeComplexProvince(this.value, sub_array, 'city', 'county');" style="margin-right: 10px;"></select>
+
+<select class="form-control" id="city" name="city" onChange="changeCity(this,'county','province');" style="margin-right: 10px;"></select>
+
+<select class="form-control" id="county" name="county" style="margin-right: 10px;"></select>
+
+<input type="button" value="获取地区" onClick="showAreaID()"/>
+
+</body>
+</html>

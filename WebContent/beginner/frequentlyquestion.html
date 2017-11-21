@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>btable</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="plugins/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/btable.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/begtable.css" />
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script type="text/javascript">
+ 
+
+$(document).ready(function(){
+       
+
+    $('.vtitle').click(function(){
+  if( $(this).next().is(':hidden') ) {
+            $('.vtitle').removeClass('cur').next().slideUp();
+            $(this).toggleClass('cur').next().slideDown();
+  }else{
+            $(this).toggleClass('cur');
+            $(this).next().slideUp();
+        }
+  return false;
+    });
+     
+        });
+
+  </script>
+</head>
+
+<body style="max-width:640px;margin:15px auto;">
+ 
+    <div class="ovel mb30">
+     
+          
+            <form class="layui-form fl"  >
+                <div class="layui-form-item" style="margin:0;">
+                   
+                    <div class="layui-input-inline" style="width:500px;">
+                        <input type="text" name="name" placeholder="内容或标题" autocomplete="off" class="layui-input" >
+                    </div>
+                    <div class="layui-form-mid layui-word-aux" style="padding:0;">
+                        <button lay-filter="search" class="layui-btn" lay-submit><i class="fa fa-search" aria-hidden="true"></i> 搜索</button>
+                    </div>
+                </div>
+            </form>
+   </div>
+           
+         <div class="tab-box"  style="width:800px;">
+              <div class="vtitle"> 【教程分享】（如何自动充值/下单基本步骤说明等..）</div>
+    <div class="vcon"  style="display:none;">
+
+   <div class="datacenter   bgff">
+   
+   <div class="inspectionlist">
+      <p>【教程分享】（如何自动充值【教程分享】（如何自动充值【教程分享】（如何自动充值【教程分享】（如何自动充值【教程分享】（如何自动充值【教程分享】（如何自动充值【教程分享】（如何自动充值【教程分享】（如何自动充值【教程分享】（如何自动充值【教程分享】（如何自动充值【教程分享】（如何自动充值</p>
+   </div>
+  </div>
+
+  </div>
+ 
+
+ 
+  <div class="vtitle"><em class="v"></em>【常见问题】（订单提前就下单成功结束了？）</div>
+    <div class="vcon" style="display:none;" >
+     <div class="datacenter   bgff">
+    
+   <div class="inspectionlist">
+      <p>【教程分享】（如何自动充值【教程分享】（如何自动充值【教程分享】（如何自动充值【教程分享】（如何自动充值【教程分享】（如何自动充值【教程分享】（如何自动充值【教程分享】（如何自动充值【教程分享】（如何自动充值【教程分享】（如何自动充值【教程分享】（如何自动充值【教程分享】（如何自动充值</p>
+   </div>
+  </div>
+  </div>
+         </div>
+ 
+        
+   
+
+    <script type="text/javascript" src="plugins/layui/layui.js"></script>
+    <script>
+            layui.use(['form', 'layedit', 'laydate'], function() {
+                var form = layui.form(),
+                    layer = layui.layer,
+                    layedit = layui.layedit,
+                    laydate = layui.laydate;
+
+                //创建一个编辑器
+                var editIndex = layedit.build('LAY_demo_editor');
+                //自定义验证规则
+                form.verify({
+                    title: function(value) {
+                        if(value.length < 5) {
+                            return '标题至少得5个字符啊';
+                        }
+                    },
+                    pass: [/(.+){6,12}$/, '密码必须6到12位'],
+                    content: function(value) {
+                        layedit.sync(editIndex);
+                    }
+                });
+
+                //监听提交
+                form.on('submit(demo1)', function(data) {
+                    layer.alert(JSON.stringify(data.field), {
+                        title: '最终的提交信息'
+                    })
+                    return false;
+                });
+            });
+
+            // function new_start(){
+            //     layer.open({
+            //         title: '添加新任务',
+            //         type: 2,
+            //         area: ['70%','70%'],
+            //         content: "newtask_smark.html"
+            //     })
+            // }
+            function new_start(){
+                layer.open({
+                    title:'新增反馈',
+                    type:2,
+                    area:['50%','72%'],
+                    content:"question_smark.html",
+                    btn: ['提交', '关闭' ]
+                })
+            }
+        </script>
+
+
+
+</body>
+
+</html>

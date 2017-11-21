@@ -1,0 +1,50 @@
+/**
+ *
+ * Apply your custom CSS here
+ *
+*/
+
+ .sub-btn{
+ 	    background: #1ab394;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+}
+ .tac{
+ 	text-align: center;
+ }
+  .sub-btn:hover{
+  	color:white;
+  	background: #2aa088;
+  }
+  .col-sm-6-nofl{
+  	float:none;
+  }
+
+.footer{
+	width: 100%;
+	padding:20px 0;
+	background: #f5f5f5;
+	position: fixed;
+	bottom:0;
+	font-size: 12px;
+
+}
+.footer a{
+	color: #979898;
+}
+
+.iziToast.iziToast-color-red {
+    background: #F8AC59!important;
+    border-color: #F8AC59!important;
+/*        background: hsla(55,75%,81%,.85);
+    border-color: hsla(55,75%,81%,.85);*/
+}
+.iziToast>.iziToast-body>strong {
+  
+    color: #fff!important;
+}
+.iziToast>.iziToast-body>p {
+    color: #fff!important;
+  
+}

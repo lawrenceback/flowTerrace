@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="plug-in-ui/hplus/css/plugins/plyr/plyr.css">
+
+</head>
+<body>
+
+<div class="player">
+	<video poster="test.png" controls crossorigin>
+		<!-- Video files -->
+		<source src="111.compressed.mp4" type="video/mp4">
+		<!-- Text track file -->
+		<track kind="captions" label="English" srclang="en" src="https://cdn.selz.com/plyr/1.0/example_captions_en.vtt" default>
+
+		<!-- Fallback for browsers that don't support the <video> element -->
+		<a href="test.mp4">Download</a>
+	</video>
+</div>
+
+<script>
+	(function (d, u) {
+		var a = new XMLHttpRequest(), b = d.body;
+		if ("withCredentials" in a) {
+			a.open("GET", u, true);
+			a.send();
+			a.onload = function () {
+				var c = d.createElement("div");
+				c.setAttribute("hidden", "");
+				c.innerHTML = a.responseText;
+				b.insertBefore(c, b.childNodes[0])
+			}
+		}
+	})(document, "plug-in-ui/hplus/css/plugins/plyr/sprite.svg");
+</script>
+<script src="plug-in-ui/hplus/js/plugins/plyr/plyr.js"></script>
+<script>
+
+
+	(function() {
+
+		// This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+		// e.g. just plyr.setup(); and leave it at that if you have no need for events
+		var players = plyr.setup('.js-player');
+
+	})();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>公共接口</title>
+
+	<link href="../plug-in-ui/hplus/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+	<link href="../plug-in-ui/hplus/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+
+	<link href="../plug-in-ui/hplus/css/animate.css" rel="stylesheet">
+	<link href="../plug-in-ui/hplus/css/style.css?v=4.1.0" rel="stylesheet">
+
+	<style>
+		.sm{
+			font-family: Microsoft YaHei;
+			color: #333;
+		}
+
+		code pre{
+			display: table;
+			padding: 0;
+			margin: 0;
+			font-size: inherit;
+			line-height: inherit;
+			color: inherit;
+			word-break: inherit;
+			word-wrap: inherit;
+			background-color: transparent;
+			border: 0;
+			border-radius: 0;
+		}
+		code pre i.code{
+			color: #666;
+		}
+
+		#list-head{
+			max-height: 500px;
+			overflow: auto;
+		}
+
+
+	</style>
+</head>
+
+<body class="gray-bg">
+
+
+
+<div class="wrapper wrapper-content">
+	<div class="row">
+		<div class="col-sm-12">
+
+			<div class="row">
+				<div class="col-sm-12">
+
+					<div class="ibox float-e-margins">
+						<div class="ibox-title">
+							<h5>接口</h5>
+						</div>
+						<div class="ibox-content">
+							<ol>
+								<li><a>------------------ License ---------------------</a></li>
+								<li><a href="fn.html#f321001">License-添加</a></li>
+								<li><a href="fn.html#f323001">License-删除</a></li>
+								<li><a href="fn.html#f320001">License-校验</a></li>
+								<li><a href="fn.html#f322002">License-更新</a></li>
+								<li><a href="fn.html#f322003">License-注册</a></li>
+								<li><a href="fn.html#f322001">License-注销</a></li>
+								<li><a href="fn.html#f210003">License-获得IMEI列表DataGrid（灵活）</a></li>
+
+								<li><a>------------------ PAC ---------------------</a></li>
+								<li><a href="fn.html#f210001">PAC-query-地区数据（Tree）</a></li>
+								<li><a href="fn.html#f210002">PAC-query-地区数据列表DataGrid（灵活）</a></li>
+								<li><a href="fn.html#f210005">PAC-query-查询某条行政区数据</a></li>
+
+								<li><a>------------------ Login (登陆) -------------</a></li>
+								<li><a href="fn.html#login">Login-登陆</a></li>
+
+								<li><a>------------------ 用户接口 -------------</a></li>
+								<li><a href="fn.html#f221001">User-添加</a></li>
+								<li><a href="fn.html#f223001">User-删除</a></li>
+								<li><a href="fn.html#f222001">User-修改</a></li>
+								<li><a href="fn.html#f220001">User-query-用户列表-通过PAC</a></li>
+
+								<li><a>------------------ 平台基础数据 -------------</a></li>
+								<li><a>------------------ 火灾热点 -------------</a></li>
+								<li><a href="fn.html#f4111001">Hot-add</a></li>
+								<li><a href="fn.html#f4111002">Hot-add-media</a></li>
+								<li><a href="fn.html#f4113001">Hot-delete</a></li>
+								<li><a href="fn.html#f4113002">Hot-delete-media</a></li>
+								<li><a href="fn.html#f4112001">Hot-edit</a></li>
+								<li><a href="fn.html#f4110001">Hot-query-列表DataGrid</a></li>
+								<li><a href="fn.html#f4110002">Hot-query-热点详情</a></li>
+
+								<li><a>------------------ 火灾热点反馈 -------------</a></li>
+								<li><a href="fn.html#f4111003">FFPHotFeedback-add</a></li>
+								<li><a href="fn.html#f4113003">FFPHotFeedback-delete-删除</a></li>
+								<li><a href="fn.html#f4112003">FFPHotFeedback-edit-修改</a></li>
+								<li><a href="fn.html#f4112002">FFPHotFeedback-edit-审核</a></li>
+								<li><a href="fn.html#f4120003">FFPHotFeedback-query-列表DataGrid</a></li>
+
+								<li><a>------------------ 监控点 -------------</a></li>
+								<li><a href="fn.html#f4121001">Remotemonitoring-add</a></li>
+								<li><a href="fn.html#f4121002">Remotemonitoring-add-media</a></li>
+								<li><a href="fn.html#f4123001">Remotemonitoring-delete</a></li>
+								<li><a href="fn.html#f4123002">Remotemonitoring-delete-media</a></li>
+								<li><a href="fn.html#f4122001">Remotemonitoring-edit</a></li>
+								<li><a href="fn.html#f4120001">Remotemonitoring-query-列表DataGrid</a></li>
+
+								<li><a>------------------ 瞭望台 -------------</a></li>
+								<li><a href="fn.html#f4131001">FFPObservatory-add</a></li>
+								<li><a href="fn.html#f4133001">FFPObservatory-delete</a></li>
+								<li><a href="fn.html#f4132001">FFPObservatory-edit</a></li>
+								<li><a href="fn.html#f4130001">FFPObservatory-query-列表DataGrid</a></li>
+
+								<li><a>------------------ 无线电台站 -------------</a></li>
+								<li><a href="fn.html#f4141001">FFPRadioStation-add</a></li>
+								<li><a href="fn.html#f4141002">FFPRadioStation-add-media</a></li>
+								<li><a href="fn.html#f4143001">FFPRadioStation-delete</a></li>
+								<li><a href="fn.html#f4143002">FFPRadioStation-delete-media</a></li>
+								<li><a href="fn.html#f4142001">FFPRadioStation-edit</a></li>
+								<li><a href="fn.html#f4140001">FFPRadioStation-query-列表DataGrid</a></li>
+
+								<li><a>------------------ 森林防火指挥部 -------------</a></li>
+								<li><a href="fn.html#f4151001">FFPCommand-add</a></li>
+								<li><a href="fn.html#f4151002">FFPCommand-add-media</a></li>
+								<li><a href="fn.html#f4153001">FFPCommand-delete</a></li>
+								<li><a href="fn.html#f4153002">FFPCommand-delete-media</a></li>
+								<li><a href="fn.html#f4152001">FFPCommand-edit</a></li>
+								<li><a href="fn.html#f4150001">FFPCommand-query-列表DataGrid</a></li>
+
+								<li><a>------------------ 防火林带 -------------</a></li>
+								<li><a href="fn.html#f4161001">FFPForestBeltPoint-add</a></li>
+								<li><a href="fn.html#f4161002">FFPForestBeltPoint-add-media</a></li>
+								<li><a href="fn.html#f4163001">FFPForestBeltPoint-delete</a></li>
+								<li><a href="fn.html#f4163002">FFPForestBeltPoint-delete-media</a></li>
+								<li><a href="fn.html#f4162001">FFPForestBeltPoint-edit</a></li>
+								<li><a href="fn.html#f4160001">FFPForestBeltPoint-query-列表DataGrid</a></li>
+
+								<li><a>------------------ 航空灭火蓄水池 -------------</a></li>
+								<li><a href="fn.html#f4171001">FFPArtificiallake-add</a></li>
+								<li><a href="fn.html#f4171002">FFPArtificiallake-add-media</a></li>
+								<li><a href="fn.html#f4173001">FFPArtificiallake-delete</a></li>
+								<li><a href="fn.html#f4173002">FFPArtificiallake-delete-media</a></li>
+								<li><a href="fn.html#f4172001">FFPArtificiallake-edit</a></li>
+								<li><a href="fn.html#f4170001">FFPArtificiallake-query-列表DataGrid</a></li>
+
+								<li><a>------------------ 林区危险及重要性 -------------</a></li>
+								<li><a href="fn.html#f4181001">FFPDangerousFacilities-add</a></li>
+								<li><a href="fn.html#f4181002">FFPDangerousFacilities-add-media</a></li>
+								<li><a href="fn.html#f4183001">FFPDangerousFacilities-delete</a></li>
+								<li><a href="fn.html#f4183002">FFPDangerousFacilities-delete-media</a></li>
+								<li><a href="fn.html#f4182001">FFPDangerousFacilities-edit</a></li>
+								<li><a href="fn.html#f4180001">FFPDangerousFacilities-query-列表DataGrid</a></li>
+
+								<li><a>------------------ 火情上报管理 -------------</a></li>
+								<li><a href="fn.html#f4191001">FFPFireSituation-add</a></li>
+								<li><a href="fn.html#f4191002">FFPFireSituation-add-media</a></li>
+								<li><a href="fn.html#f4193001">FFPFireSituation-delete</a></li>
+								<li><a href="fn.html#f4193002">FFPFireSituation-delete-media</a></li>
+								<li><a href="fn.html#f4192001">FFPFireSituation-edit</a></li>
+								<li><a href="fn.html#f4190001">FFPFireSituation-query-列表DataGrid</a></li>
+
+								<li><a>------------------ 半专业森林消防队 -------------</a></li>
+								<li><a href="fn.html#f4201001">FFPHBrigade-add</a></li>
+								<li><a href="fn.html#f4201002">FFPHBrigade-add-media</a></li>
+								<li><a href="fn.html#f4203001">FFPHBrigade-delete</a></li>
+								<li><a href="fn.html#f4203002">FFPHBrigade-delete-media</a></li>
+								<li><a href="fn.html#f4202001">FFPHBrigade-edit</a></li>
+								<li><a href="fn.html#f4200001">FFPHBrigade-query-列表DataGrid</a></li>
+
+
+								<li><a>------------------ 火灾档案 -------------</a></li>
+								<li><a href="fn.html#f4211001">FFPFireDocument-add</a></li>
+								<li><a href="fn.html#f4211002">FFPFireDocument-add-media</a></li>
+								<li><a href="fn.html#f4213001">FFPFireDocument-delete</a></li>
+								<li><a href="fn.html#f4213002">FFPFireDocument-delete-media</a></li>
+								<li><a href="fn.html#f4212001">FFPFireDocument-edit</a></li>
+								<li><a href="fn.html#f4210001">FFPFireDocument-query-列表DataGrid</a></li>
+
+								<li><a>------------------ 专业森林消防队 -------------</a></li>
+								<li><a href="fn.html#f4221001">FFPHBrigade-add</a></li>
+								<li><a href="fn.html#f4221002">FFPHBrigade-add-media</a></li>
+								<li><a href="fn.html#f4223001">FFPHBrigade-delete</a></li>
+								<li><a href="fn.html#f4223002">FFPHBrigade-delete-media</a></li>
+								<li><a href="fn.html#f4222001">FFPHBrigade-edit</a></li>
+								<li><a href="fn.html#f4220001">FFPHBrigade-query-列表DataGrid</a></li>
+
+
+								<li><a>------------------ 重点防火单位 -------------</a></li>
+								<li><a href="fn.html#f4231001">FFPImportantUnits-add</a></li>
+								<li><a href="fn.html#f4231002">FFPImportantUnits-add-media</a></li>
+								<li><a href="fn.html#f4233001">FFPImportantUnits-delete</a></li>
+								<li><a href="fn.html#f4233002">FFPImportantUnits-delete-media</a></li>
+								<li><a href="fn.html#f4232001">FFPImportantUnits-edit</a></li>
+								<li><a href="fn.html#f4230001">FFPImportantUnits-query-列表DataGrid</a></li>
+
+								<li><a>------------------ 森林防火办公室 -------------</a></li>
+								<li><a href="fn.html#f4241001">FFPOffice-add</a></li>
+								<li><a href="fn.html#f4241002">FFPOffice-add-media</a></li>
+								<li><a href="fn.html#f4243001">FFPOffice-delete</a></li>
+								<li><a href="fn.html#f4243002">FFPOffice-delete-media</a></li>
+								<li><a href="fn.html#f4242001">FFPOffice-edit</a></li>
+								<li><a href="fn.html#f4240001">FFPOffice-query-列表DataGrid</a></li>
+
+								<li><a>------------------ 飞机吊桶取水点 -------------</a></li>
+								<li><a href="fn.html#f4251001">FFPPlanewaterpoint-add</a></li>
+								<li><a href="fn.html#f4251002">FFPPlanewaterpoint-add-media</a></li>
+								<li><a href="fn.html#f4253001">FFPPlanewaterpoint-delete</a></li>
+								<li><a href="fn.html#f4253002">FFPPlanewaterpoint-delete-media</a></li>
+								<li><a href="fn.html#f4252001">FFPPlanewaterpoint-edit</a></li>
+								<li><a href="fn.html#f4250001">FFPPlanewaterpoint-query-列表DataGrid</a></li>
+
+								<li><a>------------------ 卫星地面站 -------------</a></li>
+								<li><a href="fn.html#f4261001">FFPSatelliteGroundStation-add</a></li>
+								<li><a href="fn.html#f4261002">FFPSatelliteGroundStation-add-media</a></li>
+								<li><a href="fn.html#f4263001">FFPSatelliteGroundStation-delete</a></li>
+								<li><a href="fn.html#f4263002">FFPSatelliteGroundStation-delete-media</a></li>
+								<li><a href="fn.html#f4262001">FFPSatelliteGroundStation-edit</a></li>
+								<li><a href="fn.html#f4260001">FFPSatelliteGroundStation-query-列表DataGrid</a></li>
+
+								<li><a>------------------ 森林防火物资储备库 -------------</a></li>
+								<li><a href="fn.html#f4271001">FFPWarehouse-add</a></li>
+								<li><a href="fn.html#f4271002">FFPWarehouse-add-media</a></li>
+								<li><a href="fn.html#f4273001">FFPWarehouse-delete</a></li>
+								<li><a href="fn.html#f4273002">FFPWarehouse-delete-media</a></li>
+								<li><a href="fn.html#f4272001">FFPWarehouse-edit</a></li>
+								<li><a href="fn.html#f4270001">FFPWarehouse-query-列表DataGrid</a></li>
+
+								<li><a>------------------ 大型警示牌(大型宣传牌) -------------</a></li>
+								<li><a href="fn.html#f4281001">FFPWarningBoards-add</a></li>
+								<li><a href="fn.html#f4281002">FFPWarningBoards-add-media</a></li>
+								<li><a href="fn.html#f4283001">FFPWarningBoards-delete</a></li>
+								<li><a href="fn.html#f4283002">FFPWarningBoards-delete-media</a></li>
+								<li><a href="fn.html#f4282001">FFPWarningBoards-edit</a></li>
+								<li><a href="fn.html#f4280001">FFPWarningBoards-query-列表DataGrid</a></li>
+
+								<li><a>------------------ 网格人员管理表 -------------</a></li>
+								<li><a href="fn.html#f4291001">FFPGridUserTable-add</a></li>
+								<li><a href="fn.html#f4291002">FFPGridUserTable-add-media</a></li>
+								<li><a href="fn.html#f4293001">FFPGridUserTable-delete</a></li>
+								<li><a href="fn.html#f4293002">FFPGridUserTable-delete-media</a></li>
+								<li><a href="fn.html#f4292001">FFPGridUserTable-edit</a></li>
+								<li><a href="fn.html#f4290001">FFPGridUserTable-query-列表DataGrid</a></li>
+
+							</ol>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+			
+		</div>
+	</div>
+
+
+</div>
+
+
+
+
+
+<script src="../plug-in-ui/hplus/js/jquery.min.js?v=2.1.4"></script>
+<script src="../plug-in-ui/hplus/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="../plug-in-ui/hplus/js/plugins/layer/layer.min.js"></script>
+<script src="../plug-in/hplus/contabs.js"></script>
+<script src="../plug-in/tools/tools.js"></script>
+
+</body>
+</html>

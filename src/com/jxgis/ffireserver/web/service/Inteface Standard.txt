@@ -1,0 +1,1 @@
+所有的添加接口都应该继承“SystemService”

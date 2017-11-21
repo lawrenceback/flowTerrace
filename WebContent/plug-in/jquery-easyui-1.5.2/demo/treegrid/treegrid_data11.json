@@ -1,0 +1,228 @@
+[{
+	"id":1,
+	"name":"用户管理",
+	"icon":"iconfont icon-bmgl",
+	"adds":"userController.do?manage",
+	"sort": 1,
+	"date":"02/19/2010",
+	"children":[{
+		"id":11,
+		"name":"个人信息",
+	  	"icon":"iconfont icon-bumenguanli3",
+	  	"adds":"userController.do?info",
+	  	"sort": 1,
+		"date":"03/20/2010",
+		"children":[{
+			"id":111,
+			"name":"我的积分",
+			"date":"01/13/2010",
+			"state":"closed",
+			"children":[{
+				"id":1111,
+			  	"sort": 1,
+				"name":"java.exe",
+				"size":"142 KB",
+				"date":"01/13/2010"
+			},{
+				"id":1112,
+				"name":"jawt.dll",
+			  	"sort": 2,
+				"date":"01/13/2010"
+			}]
+		},{
+			"id":112,
+			"name":"我的余额",
+			"date":"01/13/2010",
+			"state":"closed",
+			"children":[{
+				"id":1121,
+				"name":"my.ini",
+				"size":"10 KB",
+				"date":"02/26/2009"
+			},{
+				"id":1122,
+				"name":"my-huge.ini",
+				"size":"5 KB",
+				"date":"02/26/2009"
+			},{
+				"id":1123,
+				"name":"my-large.ini",
+				"size":"5 KB",
+				"date":"02/26/2009"
+			}]
+		}]
+	},{
+		"id":12,
+		"name":"修改密码",
+	  	"sort": 2,
+		"date":"01/20/2010",
+		"children":[{
+			"id":121,
+			"name":"eclipse.exe",
+			"size":"56 KB",
+			"date":"05/19/2009"
+		},{
+			"id":122,
+			"name":"eclipse.ini",
+			"size":"1 KB",
+			"date":"04/20/2010"
+		},{
+			"id":123,
+			"name":"notice.html",
+			"size":"7 KB",
+			"date":"03/17/2005"
+		}]
+	}]
+},{
+  "id":2,
+  "name":"帐单管理",
+  "size":"",
+  "icon":"iconfont icon-bmgl",
+  "adds":"userController.do?manage",
+  "sort": 2,
+  "date":"02/19/2010",
+  "children":[{
+	"id":21,
+	"name":"Program Files",
+	"size":"120 MB",
+	"icon":"iconfont icon-bumenguanli3",
+	"date":"03/20/2010",
+	"children":[{
+	  "id":211,
+	  "name":"Java",
+	  "size":"",
+	  "date":"01/13/2010",
+	  "state":"closed",
+	  "children":[{
+		"id":2111,
+		"name":"java.exe",
+		"size":"142 KB",
+		"date":"01/13/2010"
+	  },{
+		"id":2112,
+		"name":"jawt.dll",
+		"size":"5 KB",
+		"date":"01/13/2010"
+	  }]
+	},{
+	  "id":212,
+	  "name":"MySQL",
+	  "size":"",
+	  "date":"01/13/2010",
+	  "state":"closed",
+	  "children":[{
+		"id":2121,
+		"name":"my.ini",
+		"size":"10 KB",
+		"date":"02/26/2009"
+	  },{
+		"id":2122,
+		"name":"my-huge.ini",
+		"size":"5 KB",
+		"date":"02/26/2009"
+	  },{
+		"id":2123,
+		"name":"my-large.ini",
+		"size":"5 KB",
+		"date":"02/26/2009"
+	  }]
+	}]
+  },{
+	"id":22,
+	"name":"eclipse",
+	"size":"",
+	"date":"01/20/2010",
+	"children":[{
+	  "id":221,
+	  "name":"eclipse.exe",
+	  "size":"56 KB",
+	  "date":"05/19/2009"
+	},{
+	  "id":222,
+	  "name":"eclipse.ini",
+	  "size":"1 KB",
+	  "date":"04/20/2010"
+	},{
+	  "id":223,
+	  "name":"notice.html",
+	  "size":"7 KB",
+	  "date":"03/17/2005"
+	}]
+  }]
+},{
+  "id":3,
+  "name":"系统设置",
+  "size":"",
+  "icon":"iconfont icon-bmgl",
+  "adds":"userController.do?manage",
+  "sort": 3,
+  "date":"02/19/2010",
+  "children":[{
+	"id":31,
+	"name":"Program Files",
+	"size":"120 MB",
+	"icon":"iconfont icon-bumenguanli3",
+	"date":"03/20/2010",
+	"children":[{
+	  "id":311,
+	  "name":"Java",
+	  "size":"",
+	  "date":"01/13/2010",
+	  "state":"closed",
+	  "children":[{
+		"id":3111,
+		"name":"java.exe",
+		"size":"142 KB",
+		"date":"01/13/2010"
+	  },{
+		"id":3112,
+		"name":"jawt.dll",
+		"size":"5 KB",
+		"date":"01/13/2010"
+	  }]
+	},{
+	  "id":312,
+	  "name":"MySQL",
+	  "size":"",
+	  "date":"01/13/2010",
+	  "state":"closed",
+	  "children":[{
+		"id":3121,
+		"name":"my.ini",
+		"size":"10 KB",
+		"date":"02/26/2009"
+	  },{
+		"id":3122,
+		"name":"my-huge.ini",
+		"size":"5 KB",
+		"date":"02/26/2009"
+	  },{
+		"id":3123,
+		"name":"my-large.ini",
+		"size":"5 KB",
+		"date":"02/26/2009"
+	  }]
+	}]
+  },{
+	"id":32,
+	"name":"eclipse",
+	"size":"",
+	"date":"01/20/2010",
+	"children":[{
+	  "id":321,
+	  "name":"eclipse.exe",
+	  "size":"56 KB",
+	  "date":"05/19/2009"
+	},{
+	  "id":322,
+	  "name":"eclipse.ini",
+	  "size":"1 KB",
+	  "date":"04/20/2010"
+	},{
+	  "id":323,
+	  "name":"notice.html",
+	  "size":"7 KB",
+	  "date":"03/17/2005"
+	}]
+  }]
+}]
